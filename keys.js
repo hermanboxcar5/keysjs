@@ -2,8 +2,10 @@ let key = {}
 let keys = {}
 class elem {
   constructor(query) {
-    this.query = query
-    this.obj = document.querySelector(this.query)
+    this.obj = query
+    if(typeof this.obj=="string"){
+      this.obj = document.querySelector(this.obj)
+    }
   }
   
   key(c, f) {
